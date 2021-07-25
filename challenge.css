@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Karla";
+    font-size: 16px;
+    background-color: hsl(204, 43%, 93%);
+    color: white;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 40px 40px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card > div {
+    padding: 40px;
+}
+
+.card .header {
+    grid-column: span 2;
+    background-color: white;
+}
+
+.card .header .heading {
+    font-size: 22px;
+    font-weight: 700;
+    color: hsl(179, 62%, 43%);
+    margin-bottom: 20px;
+}
+
+.card .header .desc {
+    color: hsl(71, 73%, 54%);
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.card .header p {
+    color: hsl(218, 22%, 67%);
+    line-height: 1.6;
+    padding-right: 60px;
+}
+
+.card .subscription {
+    background-color: hsl(179, 62%, 43%);
+}
+
+.card .subscription .sub {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.card .subscription span:first-of-type {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.card .subscription .price {
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 10px;
+}
+
+.card .subscription .description {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.card .subscription button {
+    border: none;
+    background-color: hsl(71, 73%, 54%);
+    width: 100%;
+    padding: 17px 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0px 9px 10px 0px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+
+.card .subscription button:hover {
+    border: 3px solid hsl(71, 73%, 54%);
+    border-radius: 5px;
+    color: hsl(71, 73%, 54%);
+    background-color: transparent;
+}
+
+.card .info {
+    background-color: #4abebd;
+}
+
+.card .info .h {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.card .info ul {
+    list-style: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer {
+    background-color: rgb(53, 53, 53);
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: -30px;
+    transition: .3s;
+}
+
+.container:hover + footer {
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 600px;
+    }
+}
+
+@media (max-width: 567px) {
+    .container {
+        height: auto;
+    }
+    
+    .card {
+        width: 90%;
+        display: block;
+        margin: 100px 0;
+    }
+    
+    .card > div {
+        padding: 40px 30px;
+    }
+    
+    .card .header .desc {
+        margin-bottom: 20px;
+    }
+    
+    .card .header p {
+        line-height: 2;
+        padding-right: 0;
+        font-size: 14px;
+    }
+    .card .info ul {
+        line-height: 1.6;
+    }
+}
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: rgb(122, 148, 255);}
